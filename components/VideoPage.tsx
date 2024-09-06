@@ -109,12 +109,14 @@ const VideoPage = () => {
   return (
     <>
       <MaxWidthWrapper>
-        <div className="mt-10 flex mx-auto max-w-screen-xl px-2.5 md:px-10 flex-col items-center gap-10 sm:gap-10">
+        <div className="mt-5 flex mx-auto max-w-screen-xl px-2.5 md:px-10 flex-col items-center gap-5 sm:gap-10">
           <div className=" flex flex-col items-center">
-            <Hand className="text-purple-500 mb-2 h-8 w-8" />
-            <p className=" text-xl font-bold text-purple-700">
-              Sign Language Recognition
-            </p>
+            <div className=" flex space-x-2">
+              <Hand className="text-purple-600 text-lg" />
+              <p className=" text-xl font-bold text-purple-600">
+                ISL Detection
+              </p>
+            </div>
             <p className="text-gray-600 text-center mt-2">
               Use your camera to predict letters and words through sign language
             </p>
@@ -177,7 +179,7 @@ const VideoPage = () => {
       </MaxWidthWrapper>
 
       <div className="absolute left-1/2 bottom-10 -translate-x-1/2">
-        <p className="text-base flex items-center justify-center">
+        <p className="text-base flex items-center justify-center text-purple-500">
           FPS: {fps.toFixed(3)}
         </p>
       </div>
