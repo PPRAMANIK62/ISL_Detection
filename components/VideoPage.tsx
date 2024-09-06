@@ -25,7 +25,7 @@ const VideoPage = () => {
   const canvasElement = useRef<HTMLCanvasElement | null>(null);
   const outputCanvasElement = useRef<HTMLCanvasElement | null>(null);
 
-  const [letter, setLetter] = useState<string | null>(null);
+  const [letter, setLetter] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
   const [fps, setFps] = useState<number>(0);
   const [words, setWords] = useState<string>("");
@@ -157,12 +157,20 @@ const VideoPage = () => {
           <div className="flex flex-col items-center justify-center gap-4 w-full px-10">
             <div className=" flex flex-col items-center gap-2 w-full">
               <h5 className="text-purple-500">Predicted Letter:</h5>
-              <Input className="text-purple-300">{letter}</Input>
+              <Input
+                className="text-purple-300 text-center"
+                value={letter}
+                readOnly
+              />
             </div>
 
             <div className=" flex flex-col items-center gap-2 w-full">
               <h3 className="text-purple-500">Predicted Words:</h3>
-              <Textarea className="text-purple-300">{words}</Textarea>
+              <Textarea
+                className="text-purple-300 text-center"
+                value={words}
+                readOnly
+              />
             </div>
           </div>
         </div>
