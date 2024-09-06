@@ -10,33 +10,24 @@ const Navbar = () => {
         <div className=" flex h-14 items-center justify-between border-b border-purple-500">
           <Link
             href="/"
-            className=" flex z-40 font-semibold text-purple-500"
+            className={buttonVariants({
+              size: 'lg',
+              variant: "ghost",
+            })}
           >
-            Indian Sign Language Detection
+            Home
           </Link>
 
-          <div className=" h-full flex items-center space-x-4">
-            <Link
-              href="/"
-              className={buttonVariants({
-                size: "sm",
-                variant: "ghost",
-              })}
-            >
-              Home
-            </Link>
-
-            <Link
-              href="/about"
-              className={buttonVariants({
-                size: "sm",
-                className: "hidden sm:flex items-center gap-1",
-              })}
-            >
-              About
-              <ArrowRight className=" ml-1.5 h-5 w-5" />
-            </Link>
-          </div>
+          <Link
+            href="/about"
+            className={buttonVariants({
+              size: "lg",
+              className: "sm:flex items-center gap-1",
+            })}
+          >
+            About
+            <ArrowRight className=" ml-1.5 h-5 w-5" />
+          </Link>
         </div>
       </MaxWidthWrapper>
     </nav>

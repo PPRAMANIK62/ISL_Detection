@@ -157,28 +157,18 @@ const VideoPage = () => {
           <div className="flex flex-col items-center justify-center gap-4 w-full px-10">
             <div className=" flex flex-col items-center gap-2 w-full">
               <h5 className="text-purple-500">Predicted Letter:</h5>
-
-              {/* <h4 className=" text-xl text-purple-300 rounded-xl border-2 border-purple-200 p-2">
-                {letter}
-              </h4> */}
-
               <Input className="text-purple-300">{letter}</Input>
             </div>
 
             <div className=" flex flex-col items-center gap-2 w-full">
               <h3 className="text-purple-500">Predicted Words:</h3>
-
-              {/* <h2 className=" text-xl text-purple-300 rounded-xl border-2 border-purple-200 p-2">
-                {words}
-              </h2> */}
-
-              <Textarea className="text-purple-300"></Textarea>
+              <Textarea className="text-purple-300">{words}</Textarea>
             </div>
           </div>
         </div>
       </MaxWidthWrapper>
 
-      <div className="bottom-0 absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-3/4">
+      <div className="absolute left-1/2 bottom-10 -translate-x-1/2">
         <p className="text-base flex items-center justify-center">
           FPS: {fps.toFixed(3)}
         </p>
